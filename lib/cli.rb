@@ -1,5 +1,6 @@
 class CLI
     def run
+        Scraper.scrape_information
         system('clear')
          greeting
          while menu != 'exit'
@@ -28,6 +29,9 @@ class CLI
         case input
         when "yes"
             puts "Here they are!"
+            Games.all.each_with_index do |games, i|
+                puts "#{i + 1}. #{games.name} sales: #{games.sales}"
+            end
         end
     end
 end
