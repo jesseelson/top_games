@@ -30,7 +30,7 @@ class CLI
         when "yes"
             puts "Here they are!"
             Games.all.each_with_index do |games, i|
-                puts "#{i + 1}. #{games.name} sales: #{games.sales}"
+                puts "#{i + 1}. name: #{games.name}   sales: #{games.sales}"
             end
         end
     end
